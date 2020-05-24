@@ -138,11 +138,18 @@ class _SignupScreenState extends State<SignupScreen> {
                           color:blueThemeColor,
                           borderRadius: BorderRadius.all(Radius.circular(20))
                         ),
-                        child: Center(child: Text("Sign Up",
-                        style: GoogleFonts.comfortaa(
-                          fontSize: 28,
-                          )),
-                        
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.of(context).popAndPushNamed("/homepage");
+                          },
+                          child: Center(child: Text("Sign Up",
+                          style: GoogleFonts.comfortaa(
+                            fontSize: 28,
+                            color: Colors.white,
+                            fontStyle: FontStyle.italic,
+                            )),
+                          
+                          ),
                         ),
                       ),
                       SizedBox(

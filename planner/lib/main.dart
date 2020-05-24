@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planner/Screens/app.dart';
+import 'package:planner/Screens/home.dart';
 import 'package:planner/Screens/login.dart';
 import 'package:planner/Screens/mainlandingpage.dart';
 import 'package:planner/Screens/signup.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
+        '/homepage':(context)=> Homepage(),
         '/landingpage':(context)=> Landingpage(),
         '/signup':(context)=> SignupScreen(),
         '/login':(context)=> LoginScreen(),
