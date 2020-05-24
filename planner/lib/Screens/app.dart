@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planner/Screens/login.dart';
+import 'package:planner/Screens/mainlandingpage.dart';
 import 'package:planner/Screens/signup.dart';
 
 class Wrapper extends StatefulWidget {
@@ -10,6 +11,6 @@ class Wrapper extends StatefulWidget {
 class _WrapperState extends State<Wrapper> {
   @override
   Widget build(BuildContext context) {
-    return LoginScreen();
+    return Landingpage();
   }
 }

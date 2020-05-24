@@ -155,12 +155,17 @@ class _SignupScreenState extends State<SignupScreen> {
                           style:GoogleFonts.comfortaa(
                             fontSize: 18,
                           )),
-                          Text(" Log In",
-                          style: GoogleFonts.comfortaa(
-                            fontSize: 18,
-                            color: blueThemeColor,
-                            fontWeight: FontWeight.bold
-                          ),),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.popAndPushNamed(context, '/login');
+                            },
+                            child: Text(" Log In",
+                            style: GoogleFonts.comfortaa(
+                              fontSize: 18,
+                              color: blueThemeColor,
+                              fontWeight: FontWeight.bold
+                            ),),
+                          ),
                         ],
                       ),
                     ],

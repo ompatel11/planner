@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:planner/Screens/app.dart';
+import 'package:planner/Screens/login.dart';
+import 'package:planner/Screens/mainlandingpage.dart';
+import 'package:planner/Screens/signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/landingpage':(context)=> Landingpage(),
+        '/signup':(context)=> SignupScreen(),
+        '/login':(context)=> LoginScreen(),
+      },
       home: Wrapper(),
     );
     // return StreamProvider<User>.value(
