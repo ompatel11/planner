@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planner/Screens/login.dart';
 import 'package:planner/Screens/mainlandingpage.dart';
-import 'package:planner/Screens/signup.dart';
 
 class Wrapper extends StatefulWidget {
   @override
