@@ -14,196 +14,63 @@ class _HomepageState extends State<Homepage> {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: blueThemeColor,
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
-          Container(
-            child: ListView(
-              children: [
-                Row(
+          Align(
+            alignment: Alignment.topLeft,
+            child: Container(
+              height: h * 0.3,
+              decoration: BoxDecoration(
+                color: blueThemeColor,
+                borderRadius: BorderRadius.all(Radius.circular(45))
+              ),
+              child: Padding(
+                padding:  EdgeInsets.only(top: h * 0.07),
+                child: Column(
                   children: [
-                    SizedBox(width:15.0),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.white60,
-                        shape: BoxShape.circle
-                      ),
-                      child: Center(child: Text("E")),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(icon: FaIcon(FontAwesomeIcons.bars,color: Colors.white,size:32), onPressed: null),
+                        IconButton(icon: FaIcon(FontAwesomeIcons.solidBell,size:30,color: Colors.white,), onPressed: null)
+                      ],
                     ),
+                    SizedBox(height: 10.0),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                     children: [
+                       SizedBox(width: 10.0,),
+                       CircleAvatar(backgroundImage: ExactAssetImage('assets/k.jpg'),
+                        minRadius: 30,
+                        maxRadius: 45,
+                       ),
+                       Column(
+                         children: [
+                           Text("Welcome back Kratos,",
+                           style: GoogleFonts.comfortaa(
+                             fontSize: 26,
+                             color: textThemeColor,
+                             fontStyle: FontStyle.italic
+                           ),),
+                           Text("Your schedule is to kill Zues today!!",
+                               style: GoogleFonts.comfortaa(
+                                 fontSize: 14,
+                                 color: textThemeColor,
+                               ),),
+                         ],
+                       ),
+                    ],
+                   ),
+                   
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top:20.0,left: 20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Welcome Emma,",
-                      style: GoogleFonts.robotoSlab(
-                        fontSize:40,
-                        color:Colors.white,
-                      ),),
-                      Text("Your schedule for today is clear.",
-                      style: GoogleFonts.robotoSlab(
-                        fontSize:16,
-                        color:Colors.white,
-                      ),),
-                      SizedBox(height: 8.0,),
-                      Text("Math Test is scheduled to Monday.",
-                      style: GoogleFonts.robotoSlab(
-                        fontSize:16,
-                        color:Colors.white,
-                      ),),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding:  EdgeInsets.only(top:h * 0.1),
-                  child: Container(
-                    height: h * 0.7,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)),
-                      color: Colors.white,
-                    ),
-                    
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            top: h * 0.35,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal:40.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: (){
-                          print("GHe");
-                        },
-                        child: Container(
-                          height: 133,
-                          width: 155,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                            color: Colors.white,
-                            shape: BoxShape.rectangle,
-                            border: Border.all(color: Colors.grey)
-                          ),
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                              FaIcon(FontAwesomeIcons.solidCalendarAlt,size: 52,color: blueThemeColor,),
-                              Text("Schedules",
-                              style: GoogleFonts.comfortaa(
-                                fontSize: 22,
-                              ),)
-                            ],),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      GestureDetector(
-                        child: Container(
-                          height: 133,
-                          width: 155,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                            color: Colors.white,
-                            shape: BoxShape.rectangle,
-                            border: Border.all(color: Colors.grey)
-                          ),
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                              FaIcon(FontAwesomeIcons.pencilAlt,size: 52,color: blueThemeColor,),
-                              Text("\t Create\nSchedules",
-                              style: GoogleFonts.comfortaa(
-                                fontSize: 22,
-                              ),)
-                            ],),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                        height: 30.0,
-                      ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: (){
-                          print("GHe");
-                        },
-                        child: Container(
-                          height: 133,
-                          width: 155,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                            color: Colors.white,
-                            shape: BoxShape.rectangle,
-                            border: Border.all(color: Colors.grey)
-                          ),
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                              FaIcon(FontAwesomeIcons.chartLine,size: 52,color: blueThemeColor,),
-                              Text("Analytics",
-                              style: GoogleFonts.comfortaa(
-                                fontSize: 22,
-                              ),)
-                            ],),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      GestureDetector(
-                        child: Container(
-                          height: 133,
-                          width: 155,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                            color: Colors.white,
-                            shape: BoxShape.rectangle,
-                            border: Border.all(color: Colors.grey)
-                          ),
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                              FaIcon(FontAwesomeIcons.cog,size: 52,color: blueThemeColor,),
-                              Text("Settings",
-                              style: GoogleFonts.comfortaa(
-                                fontSize: 22,
-                              ),)
-                            ],),
-                          ),
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
+              )
             ),
           )
-        ],
-      )    
+        ],        
+      )
     );
   }
 }
+

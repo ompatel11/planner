@@ -13,7 +13,7 @@ class _LandingpageState extends State<Landingpage> {
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
-    String svg = 'assets/Group 35.svg';
+    String svg = 'assets/Calendar.svg';
     return Scaffold(
       body: Container(
         child: Column(
@@ -58,7 +58,15 @@ class _LandingpageState extends State<Landingpage> {
                       height: 65,
                       decoration: BoxDecoration(
                       color:Color(0xffFFE082),
-                      borderRadius: BorderRadius.all(Radius.circular(30))
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      boxShadow: [
+                              BoxShadow(
+                                color: blueThemeColor.withOpacity(0.5),
+                                spreadRadius: 4,
+                                blurRadius: 8,
+                                offset: Offset(1, 2), 
+                                ),
+                            ],
                       ),
                         child: Center(child: Text("Sign Up",
                           style: GoogleFonts.comfortaa(

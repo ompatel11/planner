@@ -25,19 +25,18 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: 120,
                   height: 120,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color:Colors.black87),
+                    color: blueThemeColor,
                     borderRadius: BorderRadius.all(Radius.circular(25)),
                     boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: blueThemeColor.withOpacity(0.5),
                       spreadRadius: 2,
                       blurRadius: 7,
                       offset: Offset(5, 5), // changes position of shadow
                       ),
                     ],
                   ),
-                  child: Center(child: FaIcon(FontAwesomeIcons.calendarAlt,size: 80,color: blueThemeColor,)),
+                  child: Center(child: FaIcon(FontAwesomeIcons.calendarAlt,size: 80,color: Colors.white)),
                 ),
                 
               ),
@@ -136,7 +135,15 @@ class _SignupScreenState extends State<SignupScreen> {
                         height: 50,
                         decoration: BoxDecoration(
                           color:blueThemeColor,
-                          borderRadius: BorderRadius.all(Radius.circular(20))
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                           boxShadow: [
+                              BoxShadow(
+                                color: blueThemeColor.withOpacity(0.5),
+                                spreadRadius: 4,
+                                blurRadius: 8,
+                                offset: Offset(1, 2), 
+                                ),
+                            ],
                         ),
                         child: GestureDetector(
                           onTap: (){
