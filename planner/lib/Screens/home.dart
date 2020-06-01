@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:planner/Constants/constants.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -54,7 +55,7 @@ class _HomepageState extends State<Homepage> {
                              color: textThemeColor,
                              fontStyle: FontStyle.italic
                            ),),
-                           Text("Your schedule is to kill Zues today!!",
+                           Text("Your schedule is to kill Zeus today!!",
                                style: GoogleFonts.openSans(
                                  fontSize: 16,
                                  fontWeight: FontWeight.w400,
@@ -235,51 +236,83 @@ class _HomepageState extends State<Homepage> {
                             Container(
                               decoration: BoxDecoration(
                                 color: purpleTaskColor,
-                                borderRadius: BorderRadius.all(Radius.circular(40))
+                                borderRadius: BorderRadius.all(Radius.circular(40)),
+                                boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.45),
+                                spreadRadius: 0.5,
+                                blurRadius: 6,
+                                offset: Offset(4, 5), 
+                              )]
                               ),
                               width: 152,
                               height: 180,
-                              child: Padding(
-                                padding:  EdgeInsets.only(top:110.0,left: 10.0),
-                                child: Column(
-                                  children: [
-                                    Text("Practicals",
-                                    style: GoogleFonts.openSans(
-                                      fontSize: 24,
+                              child: Column(
+                                children: [
+                                  SizedBox(height:25),
+                                  CircularPercentIndicator(
+                                    radius: 70,
+                                    lineWidth: 5.0,
+                                    percent: 0.4,
+                                    center: Text("40%",style: GoogleFonts.openSans(
                                       color: Colors.white
                                     )),
-                                    Text("3rd Year Practicals",
-                                    style: GoogleFonts.openSans(
-                                      fontSize: 14,
-                                      color: Colors.white
-                                    ))
-                                  ],
-                                ),
+                                    backgroundColor: purpleTaskColor,
+                                    progressColor: Colors.white,
+                                  ),
+                                  SizedBox(height: 10.0,),
+                                  Text("Practicals",
+                                  style: GoogleFonts.openSans(
+                                    fontSize: 24,
+                                    color: Colors.white
+                                  )),
+                                  Text("3rd Year Practicals",
+                                  style: GoogleFonts.openSans(
+                                    fontSize: 14,
+                                    color: Colors.white
+                                  ))
+                                ],
                               ),
                             ),
                             Container(
                               decoration: BoxDecoration(
                                 color: redTaskColor,
-                                borderRadius: BorderRadius.all(Radius.circular(40))
+                                borderRadius: BorderRadius.all(Radius.circular(40)),
+                                boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.45),
+                                spreadRadius: 0.5,
+                                blurRadius: 6,
+                                offset: Offset(4, 5), 
+                              )]
                               ),
                               width: 152,
                               height: 180,
-                              child: Padding(
-                                padding:  EdgeInsets.only(top:110.0,left: 10.0),
-                                child: Column(
-                                  children: [
-                                    Text("Practicals",
-                                    style: GoogleFonts.openSans(
-                                      fontSize: 24,
+                              child: Column(
+                                children: [
+                                  SizedBox(height:25),
+                                  CircularPercentIndicator(
+                                    radius: 70,
+                                    lineWidth: 5.0,
+                                    percent: 0.7,
+                                    center: Text("70%",style: GoogleFonts.openSans(
                                       color: Colors.white
                                     )),
-                                    Text("2nd Year Practicals",
-                                    style: GoogleFonts.openSans(
-                                      fontSize: 14,
-                                      color: Colors.white
-                                    ))
-                                  ],
-                                ),
+                                    backgroundColor: redTaskColor,
+                                    progressColor: Colors.white,
+                                    ),
+                                    SizedBox(height: 10.0,),
+                                  Text("Practicals",
+                                  style: GoogleFonts.openSans(
+                                    fontSize: 24,
+                                    color: Colors.white
+                                  )),
+                                  Text("2nd Year Practicals",
+                                  style: GoogleFonts.openSans(
+                                    fontSize: 14,
+                                    color: Colors.white
+                                  ))
+                                ], 
                               ),
                             )
                           ],
