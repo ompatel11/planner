@@ -33,7 +33,9 @@ class _schedulesscreenState extends State<schedulesscreen> {
                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft,color: Colors.white,size:32), onPressed: null),
+                          IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft,color: Colors.white,size:32), onPressed: (){
+                            Navigator.popAndPushNamed(context, '/homepage');
+                          }),
                           IconButton(icon: FaIcon(FontAwesomeIcons.plus,size:30,color: Colors.white,), onPressed: null)
                         ],
                       ),

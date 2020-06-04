@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         GestureDetector(
                           onTap: (){
-                            print("Hello");
+                            Navigator.popAndPushNamed(context, '/homepage');
                           },
                           child: Container(
                           width: 220,

@@ -50,7 +50,7 @@ class _LandingpageState extends State<Landingpage> {
                 ),
                 GestureDetector(
                   onTap: (){
-                    Navigator.popAndPushNamed(context,'/signup');
+                    Navigator.popAndPushNamed(context,'/login');
                   },
                   child: Padding(
                     padding:  EdgeInsets.symmetric(horizontal:40.0),
@@ -68,7 +68,7 @@ class _LandingpageState extends State<Landingpage> {
                                 ),
                             ],
                       ),
-                        child: Center(child: Text("Sign Up",
+                        child: Center(child: Text("Log In",
                           style: GoogleFonts.comfortaa(
                           fontSize: 36,
                           color: Colors.white,
