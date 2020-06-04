@@ -3,6 +3,7 @@ import 'package:planner/Screens/app.dart';
 import 'package:planner/Screens/home.dart';
 import 'package:planner/Screens/login.dart';
 import 'package:planner/Screens/mainlandingpage.dart';
+import 'package:planner/Screens/schedules.dart';
 import 'package:planner/Screens/signup.dart';
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/landingpage':(context)=> Landingpage(),
         '/signup':(context)=> SignupScreen(),
         '/login':(context)=> LoginScreen(),
+        '/schedulesscreen':(context) => schedulesscreen(),
       },
       home: Wrapper(),
     );
