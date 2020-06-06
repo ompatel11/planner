@@ -102,7 +102,7 @@ class _HomepageState extends State<Homepage> {
                             minRadius: 18,
                             maxRadius: 22,
                             child: Center(child: IconButton(icon: FaIcon(FontAwesomeIcons.calendarDay,color: Colors.white,size: 24,), onPressed: (){
-                              Navigator.popAndPushNamed(context, '/schedulesscreen');
+                              Navigator.popAndPushNamed(context, '/yearlyschedule');
                             }))),
                         )
                       ],

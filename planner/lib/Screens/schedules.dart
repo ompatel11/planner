@@ -4,12 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:planner/Constants/constants.dart';
 
-class schedulesscreen extends StatefulWidget {
+class Schedulesscreen extends StatefulWidget {
   @override
-  _schedulesscreenState createState() => _schedulesscreenState();
+  _SchedulesscreenState createState() => _SchedulesscreenState();
 }
 
-class _schedulesscreenState extends State<schedulesscreen> {
+class _SchedulesscreenState extends State<Schedulesscreen> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
