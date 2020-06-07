@@ -20,7 +20,7 @@ class _AddScheduleState extends State<AddSchedule> {
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         backgroundColor: blueThemeColor,
-        leading: IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft),onPressed: (){Navigator.popAndPushNamed(context, '/homepage');},
+        leading: IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft),onPressed: (){Navigator.popAndPushNamed(context, '/schedulesscreen');},
         ) ,
         title: Text("Create Schedule",
         style: GoogleFonts.openSans(

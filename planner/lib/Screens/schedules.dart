@@ -30,15 +30,18 @@ class _SchedulesscreenState extends State<Schedulesscreen> {
                 children: [
                    Padding(
                      padding:  EdgeInsets.only(top:h * 0.1),
-                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft,color: Colors.white,size:32), onPressed: (){
-                            Navigator.popAndPushNamed(context, '/homepage');
-                          }),
-                          IconButton(icon: FaIcon(FontAwesomeIcons.plus,size:30,color: Colors.white,), onPressed: (){Navigator.popAndPushNamed(context, '/addschedule');})
-                        ],
-                      ),
+                     child: Padding(
+                       padding:  EdgeInsets.symmetric(horizontal: w * 0.02),
+                       child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft,color: Colors.white,size:32), onPressed: (){
+                              Navigator.popAndPushNamed(context, '/homepage');
+                            }),
+                            IconButton(icon: FaIcon(FontAwesomeIcons.plus,size:30,color: Colors.white,), onPressed: (){Navigator.popAndPushNamed(context, '/addschedule');})
+                          ],
+                        ),
+                     ),
                    ),
                    Padding(
                      padding:  EdgeInsets.only(top:h*0.04,left:w * 0.08),
