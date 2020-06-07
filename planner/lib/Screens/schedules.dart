@@ -36,7 +36,7 @@ class _SchedulesscreenState extends State<Schedulesscreen> {
                           IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft,color: Colors.white,size:32), onPressed: (){
                             Navigator.popAndPushNamed(context, '/homepage');
                           }),
-                          IconButton(icon: FaIcon(FontAwesomeIcons.plus,size:30,color: Colors.white,), onPressed: null)
+                          IconButton(icon: FaIcon(FontAwesomeIcons.plus,size:30,color: Colors.white,), onPressed: (){Navigator.popAndPushNamed(context, '/addschedule');})
                         ],
                       ),
                    ),
@@ -46,7 +46,7 @@ class _SchedulesscreenState extends State<Schedulesscreen> {
                      style: GoogleFonts.openSans(
                         fontSize: 45,
                         fontWeight: FontWeight.w500,
-                        color: textThemeColor,
+                        color: Colors.white,
                         fontStyle: FontStyle.italic
                      ),),
                    )

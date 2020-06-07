@@ -34,7 +34,7 @@ void _onDaySelected(DateTime day, List events) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: blueThemeColor,
-        leading: IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft),onPressed: (){print(1);},) ,
+        leading: IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft),onPressed: (){Navigator.popAndPushNamed(context, '/homepage');},) ,
         title: Text("Yearly Schedules",
         style: GoogleFonts.comfortaa(
           fontSize: 30,

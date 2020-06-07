@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planner/Screens/app.dart';
+import 'package:planner/Screens/createshedule.dart';
 import 'package:planner/Screens/home.dart';
 import 'package:planner/Screens/login.dart';
 import 'package:planner/Screens/mainlandingpage.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/login':(context)=> LoginScreen(),
         '/schedulesscreen':(context) => Schedulesscreen(),
         '/yearlyschedule':(context) => YearlySchedule(),
+        '/addschedule':(context)=> AddSchedule(),
       },
       home: Wrapper(),
     );
