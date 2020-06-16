@@ -30,39 +30,131 @@ void _onDaySelected(DateTime day, List events) {
   }
   @override
   Widget build(BuildContext context) {
-    
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: blueThemeColor,
-        leading: IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft),onPressed: (){Navigator.popAndPushNamed(context, '/homepage');},) ,
+        actions: <Widget>[
+          IconButton(icon: FaIcon(FontAwesomeIcons.check),color: Colors.white,onPressed: (){},)
+        ],
+        leading: IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft),onPressed: (){Navigator.popAndPushNamed(context, '/addschedule');},) ,
         title: Text("Yearly Schedules",
-        style: GoogleFonts.comfortaa(
-          fontSize: 30,
-          color: textThemeColor,
-          fontWeight: FontWeight.w600,
+        style: GoogleFonts.openSans(
+          fontSize: 28,
+          fontWeight: FontWeight.w500,
+          color: Colors.white,
           fontStyle: FontStyle.italic
-        ),),
+          ),),
       ),
      
-      body: Column( 
-        children: [
-          TableCalendar(calendarController: _calendarController,
-          onDaySelected: _onDaySelected,),
-          Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-              Text("Events",style: GoogleFonts.comfortaa(
-                fontSize: 32,
-                color: textThemeColor
-              ),),
-              IconButton(icon: FaIcon(FontAwesomeIcons.plusCircle,color: blueThemeColor,size: 36), onPressed: ()async{
-                selectTime(context);
-              })
-            ],),
-          )
-        ],
+      body: Container(
+        child: Column( 
+          children: [
+            TableCalendar(calendarController: _calendarController,
+            onDaySelected: _onDaySelected,),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                Text("Events",style: GoogleFonts.comfortaa(
+                  fontSize: 32,
+                  color: textThemeColor
+                ),),
+                IconButton(icon: FaIcon(FontAwesomeIcons.plusCircle,color: blueThemeColor,size: 36), onPressed: ()async{
+                  selectTime(context);
+                })
+              ],),
+            ),
+            SizedBox(height: 20,),
+            Column(
+              children: <Widget>[
+                Container(
+                  height: 55,
+                  width: w * 0.9,
+                  decoration: BoxDecoration(
+                    border: Border.all(color:textThemeColor),
+                    borderRadius: BorderRadius.all(Radius.circular(12))
+                  ),
+                  child: Padding(
+                    padding:  EdgeInsets.only(left:8.0,top: 17.0),
+                    child: Row(
+                      children: <Widget>[
+                        Text("Event 1",
+                        style: GoogleFonts.comfortaa(
+                          fontSize: 22,
+                        ),),
+                        SizedBox(width: 140.0,),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text("From: 16th May'20",
+                        style: GoogleFonts.acme(
+                          fontSize: 12,
+                        ),),
+                        Text("To: 22th June'20",
+                        style: GoogleFonts.acme(
+                          fontSize: 12,
+                          
+                        ),),
+                        SizedBox(
+                          height: 5.0
+                        ),
+                          ],
+                        
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Container(
+                  height: 55,
+                  width: w * 0.9,
+                  decoration: BoxDecoration(
+                    border: Border.all(color:textThemeColor),
+                    borderRadius: BorderRadius.all(Radius.circular(12))
+                  ),
+                  child: Padding(
+                    padding:  EdgeInsets.only(left:8.0,top: 17.0),
+                    child: Row(
+                      children: <Widget>[
+                        Text("Event 2",
+                        style: GoogleFonts.comfortaa(
+                          fontSize: 22,
+                        ),),
+                        SizedBox(width: 140.0,),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text("From: 18h June'20",
+                        style: GoogleFonts.acme(
+                          fontSize: 12,
+                        ),),
+                        Text("To: 24th July'20",
+                        style: GoogleFonts.acme(
+                          fontSize: 12,
+                        ),),
+                        SizedBox(
+                          height: 5.0
+                        ),
+                          ],
+                        
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

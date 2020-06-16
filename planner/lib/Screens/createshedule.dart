@@ -65,78 +65,78 @@ class _AddScheduleState extends State<AddSchedule> {
               SizedBox(
               height: h *0.01,
               ),
-              Row(
-                children: [
-                  Text("Select Type of schedule",
-                  style: GoogleFonts.comfortaa(
-                    fontSize: 18
-                  ),),
-                ],
-              ),
+              // Row(
+              //   children: [
+              //     Text("Select Type of schedule",
+              //     style: GoogleFonts.comfortaa(
+              //       fontSize: 18
+              //     ),),
+              //   ],
+              // ),
               SizedBox(
               height: h *0.03,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GestureDetector(
-                    onTap: (){
-                      print("1");
-                      setState(() {
-                        if (weekcolor==false){
-                          print(weekcolor);
-                          return weekcolor=true;
-                        }
-                        else{
-                          print(weekcolor);
-                          return weekcolor=false;
-                        }
-                       });
-                    },
-                    child: Container(
-                      height: 35,
-                      width: 100,
-                      child: Center(child: Text("Weekly")),
-                      decoration: BoxDecoration(
-                        border: Border.all(color:textThemeColor),
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                        color: weekcolor==true? blueThemeColor: Colors.white
-                      ),
-                    ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+              //     GestureDetector(
+              //       onTap: (){
+              //         print("1");
+              //         setState(() {
+              //           if (weekcolor==false){
+              //             print(weekcolor);
+              //             return weekcolor=true;
+              //           }
+              //           else{
+              //             print(weekcolor);
+              //             return weekcolor=false;
+              //           }
+              //          });
+              //       },
+              //       child: Container(
+              //         height: 35,
+              //         width: 100,
+              //         child: Center(child: Text("Weekly")),
+              //         decoration: BoxDecoration(
+              //           border: Border.all(color:textThemeColor),
+              //           borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              //           color: weekcolor==true? blueThemeColor: Colors.white
+              //         ),
+              //       ),
                     
-                  ),
-                  GestureDetector(
-                    onTap: (){
-                      setState(() {
-                        if (weekcolor==false){
-                          print(weekcolor=true);
-                          return weekcolor=true;
-                        }
-                        else{
-                          print(weekcolor);
-                          print(weekcolor=false);
-                          return weekcolor=false;
-                        }
-                       });
-                    },
-                    child: Container(
-                      height: 35,
-                      width: 100,
-                      child: Center(child: Text("Yearly")),
-                      decoration: BoxDecoration(
-                        border: Border.all(color:textThemeColor),
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                        color: weekcolor==true? blueThemeColor: Colors.white
-                      ),
-                    ),
+              //     ),
+              //     GestureDetector(
+              //       onTap: (){
+              //         setState(() {
+              //           if (weekcolor==false){
+              //             print(weekcolor=true);
+              //             return weekcolor=true;
+              //           }
+              //           else{
+              //             print(weekcolor);
+              //             print(weekcolor=false);
+              //             return weekcolor=false;
+              //           }
+              //          });
+              //       },
+              //       child: Container(
+              //         height: 35,
+              //         width: 100,
+              //         child: Center(child: Text("Yearly")),
+              //         decoration: BoxDecoration(
+              //           border: Border.all(color:textThemeColor),
+              //           borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              //           color: weekcolor==true? blueThemeColor: Colors.white
+              //         ),
+              //       ),
                     
-                  )
-                ],
-              ),
-              SizedBox(
-                height: h * 0.06,
-              ),
+              //     )
+              //   ],
+              // ),
               GestureDetector(
+                onTap: (){
+                  Navigator.popAndPushNamed(context, '/yearlyschedule');
+                },
                 child: Container(
                   height: 55,
                   width: 200,
