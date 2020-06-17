@@ -12,7 +12,7 @@ class _AddMembersState extends State<AddMembers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(backgroundColor:blueThemeColor,child: IconButton(icon: FaIcon(FontAwesomeIcons.plus),onPressed: (){}),),
+      floatingActionButton: FloatingActionButton(backgroundColor:blueThemeColor,child: FaIcon(FontAwesomeIcons.plus),onPressed: (){Navigator.popAndPushNamed(context, '/homepage');},),
       appBar: AppBar(
         backgroundColor: blueThemeColor,
         actions: <Widget>[
