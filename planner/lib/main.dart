@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planner/Screens/addmembers.dart';
 import 'package:planner/Screens/app.dart';
 import 'package:planner/Screens/createshedule.dart';
 import 'package:planner/Screens/home.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/schedulesscreen':(context) => Schedulesscreen(),
         '/yearlyschedule':(context) => YearlySchedule(),
         '/addschedule':(context)=> AddSchedule(),
+        '/addmembers':(context) => AddMembers(),
       },
       home: Wrapper(),
     );

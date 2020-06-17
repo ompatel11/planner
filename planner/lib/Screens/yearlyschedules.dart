@@ -36,7 +36,7 @@ void _onDaySelected(DateTime day, List events) {
       appBar: AppBar(
         backgroundColor: blueThemeColor,
         actions: <Widget>[
-          IconButton(icon: FaIcon(FontAwesomeIcons.check),color: Colors.white,onPressed: (){},)
+          IconButton(icon: FaIcon(FontAwesomeIcons.check),color: Colors.white,onPressed: (){Navigator.popAndPushNamed(context, '/addmembers');},)
         ],
         leading: IconButton(icon: FaIcon(FontAwesomeIcons.chevronLeft),onPressed: (){Navigator.popAndPushNamed(context, '/addschedule');},) ,
         title: Text("Yearly Schedules",

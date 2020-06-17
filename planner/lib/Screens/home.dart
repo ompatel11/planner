@@ -72,7 +72,7 @@ class _HomepageState extends State<Homepage> {
             ),
           ),
           Padding(
-            padding:  EdgeInsets.only(top: h * 0.32),
+            padding:  EdgeInsets.only(top: h * 0.3),
             child: SingleChildScrollView(
               child: Column(
               children: [
